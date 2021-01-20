@@ -26,11 +26,12 @@
         <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
         <webjars-jquery.version>2.2.4</webjars-jquery.version>
         <wro4j.version>1.8.0</wro4j.version>
+        <!-- For example D:\Github\Drill-Samples\maven-sample\spring-petclinic\agent        -->
         <pathToAgent>D:\Github\Drill-Samples\maven-sample\spring-petclinic\agent</pathToAgent>
         <adminHost>localhost</adminHost>
         <agentId>Petclinic</agentId>
         <adminPort>8090</adminPort>
-        <jvm.args>-agentpath:${pathToAgent}/drill_agent.dll=drillInstallationDir=${pathToAgent}/,adminAddress=${adminHost}:${adminPort},agentId=${agentId},buildVersion=${project.parent.version},logLevel=TRACE</jvm.args>
+        <jvm.args>-agentpath:${pathToAgent}/drill_agent.dll=drillInstallationDir=${pathToAgent}/,adminAddress=${adminHost}:${adminPort},agentId=${agentId},buildVersion=${project.parent.version},logLevel=INFO</jvm.args>
 
         <jacoco.version>0.8.2</jacoco.version>
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam</groupId>
-    <artifactId>autotest-sample</artifactId>
+    <artifactId>autotest-junit4-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>autotest-sample</name>
@@ -36,14 +36,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>drill</id>
-            <url>https://oss.jfrog.org/artifactory/list/oss-release-local</url>
-        </pluginRepository>
-    </pluginRepositories>
-
 
  <profiles>
      <profile>
@@ -80,15 +72,12 @@
                              <agentId>${drillAgentPlugin.agentId}</agentId>
                              <adminHost>localhost</adminHost>
                              <adminPort>8090</adminPort>
-                             <logLevel>TRACE</logLevel>
+                             <logLevel>INFO</logLevel>
                          </drill>
                      </configuration>
                  </plugin>
              </plugins>
          </build>
-         <properties>
-             <!--                <extraArgs>${argLine}</extraArgs> // expose to surfire if needed-->
-         </properties>
      </profile>
  </profiles>
 

@@ -1,29 +1,23 @@
-package com.epam;
+package com.epam.api;
+
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Unit autotest example for petclinic app.
+ * JUnit5 autotest example for petclinic app.
  */
-public class SimpleTests {
-
+public class SimpleTests
+{
     private final String pathToServer = "http://localhost:8080";
     private final CloseableHttpClient httpclient = HttpClients.createDefault();
-
-    @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(true);
-    }
 
     @Test
     public void getOwner4InfoPage() throws IOException {
@@ -42,7 +36,6 @@ public class SimpleTests {
         assertEquals(response.getStatusLine().getStatusCode(), 200);
     }
 
-   // @Ignore
     @Test
     public void getHomePage() throws IOException {
         HttpGet httpGet = new HttpGet(pathToServer + "/");
