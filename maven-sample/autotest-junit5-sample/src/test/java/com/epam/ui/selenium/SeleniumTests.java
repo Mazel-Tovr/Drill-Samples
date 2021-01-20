@@ -1,4 +1,4 @@
-package com.epam.ui;
+package com.epam.ui.selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Assertions;
