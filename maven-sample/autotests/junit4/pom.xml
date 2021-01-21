@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam</groupId>
-    <artifactId>autotest-junit4</artifactId>
+    <artifactId>junit4</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>autotest-junit4</name>
+    <name>junit4</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

@@ -5,7 +5,7 @@ import org.apache.http.client.methods.*;
 import org.apache.http.impl.client.*;
 import org.junit.*;
 
-import java.io.IOException;
+import java.io.*;
 
 
 /**
@@ -24,14 +24,13 @@ public class AppTest
         Assert.assertEquals(response.getStatusLine().getStatusCode(), 200);
     }
 
-    //TODO Seems this test doesn't work
-//    @Test
-//    public void getOwner4EditPage() throws IOException {
-//
-//        HttpGet httpGet = new HttpGet(pathToServer + "/owners/4/edit");
-//        CloseableHttpResponse response = httpclient.execute(httpGet);
-//        Assert.assertEquals(response.getStatusLine().getStatusCode(), 200);
-//    }
+    @Test
+    public void getOwner4EditPage() throws IOException {
+
+        HttpGet httpGet = new HttpGet(pathToServer + "/owners/4/edit");
+        CloseableHttpResponse response = httpclient.execute(httpGet);
+        Assert.assertEquals(response.getStatusLine().getStatusCode(), 200);
+    }
 
     @Test
     public void getHomePage() throws IOException {
